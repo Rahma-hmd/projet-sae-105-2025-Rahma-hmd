@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - L'Effet Matilda</title>
     <link rel="stylesheet" href="../src/css/style.css">
 </head>
+
 <body>
     <header>
         <button>EN</button>
@@ -21,7 +22,7 @@
         <!-- Bloc d'ouverture : titre + visuel principal -->
         <article>
             <h1>L’EFFET MATILDA</h1>
-            <img src="images/accueil-alice-portrait.jpg" alt="Portrait d’Alice Ball dans son laboratoire">
+            <img src="../assets/img/heropageacceuil.avif" alt="Portrait d’Alice Ball dans son laboratoire">
             <p class="carte-legende">
                 Alice Ball : la scientifique qui a sauvé de nombreuses vies, tombée dans l’oubli.
             </p>
@@ -45,7 +46,8 @@
                         </p>
                     </div>
                     <figure class="effet-image">
-                        <img src="../assets/img/accordeon%20image.avif" alt="Alice Ball en tenue de scientifique avec du matériel de laboratoire">
+                        <img src="../assets/img/accordeon%20image.avif"
+                            alt="Alice Ball en tenue de scientifique avec du matériel de laboratoire">
                     </figure>
                 </div>
             </div>
@@ -111,8 +113,12 @@
                 </article>
             </div>
 
-            <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Article précédent">←</button>
-            <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Article suivant">→</button>
+            <div class="carousel-controls" role="group" aria-label="Contrôles du carrousel">
+                <button class="carousel-arrow carousel-arrow--prev" type="button"
+                    aria-label="Article précédent">←</button>
+                <button class="carousel-arrow carousel-arrow--next" type="button"
+                    aria-label="Article suivant">→</button>
+            </div>
         </section>
 
         <!-- Titre "Pour aller plus loin" -->
@@ -123,7 +129,7 @@
         <!-- Cartes vers les autres pages -->
         <section class="section-cartes">
             <article class="carte-lien">
-                <img src="images/accueil-frise.jpg" alt="Photographie scientifique en laboratoire">
+                <img src="../assets/img/FRISEacceuil.avif" alt="Photographie scientifique en laboratoire">
                 <div class="carte-contenu">
                     <h3>Frise chronologique</h3>
                     <p>Découvrir d’autres femmes scientifiques oubliées.</p>
@@ -132,7 +138,7 @@
             </article>
 
             <article class="carte-lien">
-                <img src="images/accueil-galerie.jpg" alt="Écrans de télévision affichant des images scientifiques">
+                <img src="../assets/img/galerieacceuil.avif" alt="Écrans de télévision affichant des images scientifiques">
                 <div class="carte-contenu">
                     <h3>Galerie</h3>
                     <p>Explorer la galerie de films et de livres.</p>
@@ -141,7 +147,7 @@
             </article>
 
             <article class="carte-lien">
-                <img src="images/accueil-glossaire.jpg" alt="Machine à écrire et dossiers empilés">
+                <img src="../assets/img/glossaireacceuil.avif" alt="Machine à écrire et dossiers empilés">
                 <div class="carte-contenu">
                     <h3>Glossaire</h3>
                     <p>Comprendre les notions clés de l’Effet Matilda.</p>
@@ -152,94 +158,124 @@
     </main>
 
     <footer>
-        <div class="footer-logo">
-            <span class="logo-ball">Ball</span>
-            <span class="logo-alice">Alice</span>
-        </div>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <span class="logo-ball">Ball</span>
+                    <span class="logo-alice">Alice</span>
+                </div>
 
-        <nav class="footer-menu">
-            <h2>MENU</h2>
-            <ul>
-                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
-                <li><a href="a-propos.html">A PROPOS</a></li>
-                <li><a href="contact.html">CONTACTS</a></li>
-                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
-            </ul>
-        </nav>
+                <nav class="footer-menu">
+                    <h2>MENU</h2>
+                    <ul>
+                        <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                        <li><a href="a-propos.html">A PROPOS</a></li>
+                        <li><a href="contact.html">CONTACTS</a></li>
+                        <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <div class="footer-contact">
-            <h2>CONTACT</h2>
-            <p>DÉPARTEMENT MMI</p>
-            <p>4 PL. LUCIEN THARRADIN</p>
-            <p>25200 MONTBÉLIARD</p>
-            <p>03 81 99 47 34</p>
-        </div>
+            <div class="footer-right">
+                <div class="footer-contact">
+                    <h2>CONTACT</h2>
+                    <p>DÉPARTEMENT MMI</p>
+                    <p>4 PL. LUCIEN THARRADIN</p>
+                    <p>25200 MONTBÉLIARD</p>
+                    <p>03 81 99 47 34</p>
+                </div>
 
-        <div class="footer-social">
-            <h2>NOUS SUIVRE</h2>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">i</a>
-                <a href="#" aria-label="Twitter">t</a>
-                <a href="#" aria-label="YouTube">y</a>
+                <div class="footer-social">
+                    <h2>NOUS SUIVRE</h2>
+                    <div class="social-icons">
+                        <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
+                            <img src="../assets/img/facebook.svg" alt="Facebook" />
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+                            <img src="../assets/img/instagram.svg" alt="Instagram" />
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter" title="Twitter">
+                            <img src="../assets/img/twitter.svg" alt="Twitter" />
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube" title="YouTube">
+                            <img src="../assets/img/youtube.svg" alt="YouTube" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <p class="footer-credits">
+        <div class="footer-credits">
             PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL
-        </p>
+        </div>
     </footer>
 
     <script>
-      // Accordéon "L'effet Matilda : c'est quoi ?"
-      document.addEventListener('DOMContentLoaded', function () {
-        const accordeon = document.querySelector('.accordeon');
-        if (accordeon) {
-          const headerButton = accordeon.querySelector('.accordeon-header');
-          if (headerButton) {
-            headerButton.addEventListener('click', function () {
-              accordeon.classList.toggle('accordeon--open');
-            });
-          }
-        }
+        // Accordéon "L'effet Matilda : c'est quoi ?"
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordeon = document.querySelector('.accordeon');
+            if (accordeon) {
+                const headerButton = accordeon.querySelector('.accordeon-header');
+                if (headerButton) {
+                    headerButton.addEventListener('click', function () {
+                        accordeon.classList.toggle('accordeon--open');
+                    });
+                }
+            }
 
-        // Carousel d'articles
-        const carousel = document.querySelector('.carousel-articles');
-        if (carousel) {
-          const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
-          const prevBtn = carousel.querySelector('.carousel-arrow--prev');
-          const nextBtn = carousel.querySelector('.carousel-arrow--next');
-          let index = 0;
-          let autoTimer = null;
+            // Carousel d'articles (scroll-based)
+            const carousel = document.querySelector('.carousel-articles');
+            if (carousel) {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+                const prevBtn = carousel.querySelector('.carousel-arrow--prev');
+                const nextBtn = carousel.querySelector('.carousel-arrow--next');
+                let current = 0;
+                let autoTimer = null;
 
-          function showSlide(newIndex) {
-            slides[index].classList.remove('is-active');
-            index = (newIndex + slides.length) % slides.length;
-            slides[index].classList.add('is-active');
-          }
+                function scrollToIndex(index) {
+                    const n = (index + slides.length) % slides.length;
+                    track.scrollTo({ left: slides[n].offsetLeft, behavior: 'smooth' });
+                    current = n;
+                }
 
-          function startAuto() {
-            if (autoTimer) clearInterval(autoTimer);
-            autoTimer = setInterval(function () {
-              showSlide(index + 1);
-            }, 5000);
-          }
+                function startAuto() {
+                    if (autoTimer) clearInterval(autoTimer);
+                    autoTimer = setInterval(function () {
+                        scrollToIndex(current + 1);
+                    }, 5000);
+                }
 
-          if (prevBtn && nextBtn && slides.length) {
-            prevBtn.addEventListener('click', function () {
-              showSlide(index - 1);
-              startAuto();
-            });
-            nextBtn.addEventListener('click', function () {
-              showSlide(index + 1);
-              startAuto();
-            });
+                function restartAuto() {
+                    startAuto();
+                }
 
-            // lancement auto au chargement
-            startAuto();
-          }
-        }
-      });
+                if (prevBtn && nextBtn && slides.length) {
+                    prevBtn.addEventListener('click', function () {
+                        scrollToIndex(current - 1);
+                        restartAuto();
+                    });
+                    nextBtn.addEventListener('click', function () {
+                        scrollToIndex(current + 1);
+                        restartAuto();
+                    });
+
+                    // update current index on manual scroll
+                    let scrollTimeout = null;
+                    track.addEventListener('scroll', function () {
+                        if (scrollTimeout) clearTimeout(scrollTimeout);
+                        scrollTimeout = setTimeout(function () {
+                            const idx = Math.round(track.scrollLeft / track.clientWidth);
+                            current = Math.min(Math.max(idx, 0), slides.length - 1);
+                        }, 100);
+                    });
+
+                    // lancement auto au chargement
+                    startAuto();
+                }
+            }
+        });
     </script>
 </body>
+
 </html>
