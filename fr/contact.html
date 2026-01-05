@@ -8,65 +8,79 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="article1.html">Article 1</a></li>
-                <li><a href="article2.html">Article 2</a></li>
-                <li><a href="article3.html">Article 3</a></li>
-                <li><a href="article4.html">Article 4</a></li>
-                <li><a href="article5.html">Article 5</a></li>
-                <li><a href="frise.html">Frise</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="autres-projet.html">Autres projets</a></li>
-            </ul>
-        </nav>
+        <button>EN</button>
+        <div class="logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        <button class="menu-toggle">☰</button>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Contact</h1>
-            <p>N'hésitez pas à nous contacter pour toute question ou commentaire.</p>
-        </section>
+        <section>
+            <h1>CONTACTEZ-NOUS</h1>
 
-        <section class="content">
-            <form class="contact-form" action="#" method="post">
+            <form action="#" method="post">
                 <div class="form-group">
-                    <label for="name">Nom :</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Entrez votre nom d'utilisateur" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Emails</label>
+                    <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Sujet :</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <label for="subject">Objet du message</label>
+                    <input type="text" id="subject" name="subject" placeholder="Objet du message" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici" required></textarea>
                 </div>
 
-                <button type="submit" class="btn">Envoyer</button>
+                <button type="submit">ENVOYER</button>
             </form>
-
-            <section class="contact-info">
-                <h2>Informations de contact</h2>
-                <p><strong>Email :</strong> contact@projet-sae105.fr</p>
-                <p><strong>Téléphone :</strong> +33 X XX XX XX XX</p>
-                <p><strong>Adresse :</strong> Adresse du projet</p>
-            </section>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Projet SAE 105. Tous droits réservés.</p>
+        <div class="footer-logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        
+        <nav class="footer-menu">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                <li><a href="a-propos.html">A PROPOS</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+            </ul>
+        </nav>
+        
+        <div class="footer-contact">
+            <h2>CONTACT</h2>
+            <p>DÉPARTEMENT MMI</p>
+            <p>4 PL. LUCIEN THARRADIN</p>
+            <p>25200 MONTBÉLIARD</p>
+            <p>03 81 99 47 34</p>
+        </div>
+        
+        <div class="footer-social">
+            <h2>NOUS SUIVRE</h2>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="YouTube">y</a>
+            </div>
+        </div>
+        
+        <p class="footer-credits">PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL</p>
     </footer>
 </body>
 </html>

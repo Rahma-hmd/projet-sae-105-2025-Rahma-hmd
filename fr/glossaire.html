@@ -8,59 +8,92 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="article1.html">Article 1</a></li>
-                <li><a href="article2.html">Article 2</a></li>
-                <li><a href="article3.html">Article 3</a></li>
-                <li><a href="article4.html">Article 4</a></li>
-                <li><a href="article5.html">Article 5</a></li>
-                <li><a href="frise.html">Frise</a></li>
-                <li><a href="glossaire.html" class="active">Glossaire</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="autres-projet.html">Autres projets</a></li>
-            </ul>
-        </nav>
+        <button>EN</button>
+        <div class="logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        <button class="menu-toggle">☰</button>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Glossaire</h1>
-            <p>Définitions des termes importants utilisés dans ce projet.</p>
+        <section>
+            <h1>GLOSSAIRE</h1>
+
+            <img src="images/glossaire-livres.jpg" alt="Pile de livres ouverts" />
         </section>
 
-        <section class="glossary">
-            <div class="glossary-item">
-                <h3>Terme 1</h3>
-                <p>Définition du terme 1. Explication détaillée de ce que signifie ce terme dans le contexte du projet.</p>
-            </div>
+        <div class="glossary">
+            <article>
+                <h2>MÉTHODE BALL</h2>
+                <p>Procédé développé par Alice Ball en 1915 pour rendre injectable l'huile de chaulmoogra, utilisée dans le traitement de la lèpre. Ce fut la première méthode réellement efficace contre la maladie. Ses travaux furent attribués à tort à un homme après sa mort, illustrant parfaitement l'Effet Matilda.</p>
+            </article>
 
-            <div class="glossary-item">
-                <h3>Terme 2</h3>
-                <p>Définition du terme 2. Explication détaillée de ce que signifie ce terme dans le contexte du projet.</p>
-            </div>
+            <article>
+                <h2>CHAULMOOGRA</h2>
+                <p>Huile extraite des graines d'un arbre tropical (Hydnocarpus wightiana), utilisée historiquement pour soigner la lèpre. Alice Ball a réussi à la transformer chimiquement afin de pouvoir l'injecter sans douleur ni effets secondaires.</p>
+            </article>
 
-            <div class="glossary-item">
-                <h3>Terme 3</h3>
-                <p>Définition du terme 3. Explication détaillée de ce que signifie ce terme dans le contexte du projet.</p>
-            </div>
+            <article>
+                <h2>LÈPRE</h2>
+                <p>Maladie infectieuse chronique, autrefois incurable, qui provoque des lésions cutanées et nerveuses. Longtemps associée à l'exclusion sociale. Les travaux d'Alice Ball ont permis un traitement réellement efficace au début du XXᵉ siècle.</p>
+            </article>
 
-            <div class="glossary-item">
-                <h3>Terme 4</h3>
-                <p>Définition du terme 4. Explication détaillée de ce que signifie ce terme dans le contexte du projet.</p>
-            </div>
+            <article>
+                <h2>EFFET MATILDA</h2>
+                <p>Concept sociologique inventé par Matilda Joslyn Gage décrivant la tendance à effacer ou à minimiser les contributions des femmes scientifiques au profit de leurs collègues masculins. Alice Ball, Rosalind Franklin et Lise Meitner en sont des exemples emblématiques.</p>
+            </article>
 
-            <div class="glossary-item">
-                <h3>Terme 5</h3>
-                <p>Définition du terme 5. Explication détaillée de ce que signifie ce terme dans le contexte du projet.</p>
-            </div>
-        </section>
+            <article>
+                <h2>STEM</h2>
+                <p>Acronyme anglais pour Science, Technology, Engineering and Mathematics. Regroupe les disciplines scientifiques et techniques encore dominées par les hommes, où la parité reste un enjeu mondial.</p>
+            </article>
+        </div>
+
+        <div>
+            <a href="#" class="voir-plus">→ VOIR PLUS</a>
+
+            <blockquote>
+                <p>“Nommer, c'est reconnaître ; reconnaître, c'est réparer.”</p>
+            </blockquote>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Projet SAE 105. Tous droits réservés.</p>
+        <div class="footer-logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        
+        <nav class="footer-menu">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                <li><a href="a-propos.html">A PROPOS</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+            </ul>
+        </nav>
+        
+        <div class="footer-contact">
+            <h2>CONTACT</h2>
+            <p>DÉPARTEMENT MMI</p>
+            <p>4 PL. LUCIEN THARRADIN</p>
+            <p>25200 MONTBÉLIARD</p>
+            <p>03 81 99 47 34</p>
+        </div>
+        
+        <div class="footer-social">
+            <h2>NOUS SUIVRE</h2>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="YouTube">y</a>
+            </div>
+        </div>
+        
+        <p class="footer-credits">PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL</p>
     </footer>
 </body>
 </html>

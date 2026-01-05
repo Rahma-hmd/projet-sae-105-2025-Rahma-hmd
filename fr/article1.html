@@ -3,57 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article 1 - Projet SAE 105</title>
+    <title>Alice Ball: La Chimiste Oubliée - Projet SAE 105</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="article1.html" class="active">Article 1</a></li>
-                <li><a href="article2.html">Article 2</a></li>
-                <li><a href="article3.html">Article 3</a></li>
-                <li><a href="article4.html">Article 4</a></li>
-                <li><a href="article5.html">Article 5</a></li>
-                <li><a href="frise.html">Frise</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="autres-projet.html">Autres projets</a></li>
-            </ul>
-        </nav>
+        <button>EN</button>
+        <div class="logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        <button class="menu-toggle">☰</button>
     </header>
 
     <main>
-        <article class="article-content">
-            <h1>Article 1</h1>
-            <p class="article-meta">Publié le <time datetime="2025-01-01">1er janvier 2025</time></p>
+        <article>
+            <h1>ALICE BALL: LA CHIMISTE OUBLIÉE</h1>
             
-            <section>
-                <h2>Introduction</h2>
-                <p>Contenu de l'article 1. Cette section contient l'introduction de votre article.</p>
-            </section>
-
-            <section>
-                <h2>Développement</h2>
-                <p>Contenu principal de l'article 1. Développez ici vos idées et arguments.</p>
-            </section>
-
-            <section>
-                <h2>Conclusion</h2>
-                <p>Conclusion de l'article 1. Résumez les points principaux abordés.</p>
-            </section>
+            <img src="images/alice-ball.jpg" alt="Alice Ball en laboratoire" />
+            
+            <h2>Jeune chimiste afro-américaine, Alice Ball a transformé l'histoire du traitement de la lèpre.</h2>
+            
+            <p>Née le 24 juillet 1892 à Seattle, Alice Augusta Ball grandit dans une famille de photographes, un milieu où les procédés chimiques liés au développement d'images l'initient très tôt aux sciences.</p>
+            
+            <p>Elle obtient deux licences (chimie pharmaceutique et pharmacie) à l'Université de Washington, puis se rend à Hawaï pour poursuivre une maîtrise en chimie. Elle devient la première femme afro-américaine à obtenir ce diplôme dans cette institution. Sa contribution majeure : elle modifie l'huile de chaulmoogra pour la rendre injectable, créant ce qu'on appellera plus tard la "méthode Ball".</p>
+            
+            <p>Cette technique est employée pendant près de 20 années pour traiter la maladie de Hansen (lèpre). Après son décès en 1916, ses recherches sont reprises par des collègues masculins qui omettent de créditer ses travaux. Le nom d'Alice Ball tombe dans l'oubli pendant des décennies, jusqu'à ce qu'on réhabilite sa mémoire au XXIe siècle. Cet exemple illustre l'effet Matilda : la minimisation ou l'appropriation injuste des contributions des femmes scientifiques.</p>
+            
+            <a href="#" class="voir-plus">→ VOIR PLUS</a>
+            
+            <blockquote>
+                <p>Elle a offert la guérison à d'autres, sans jamais en recevoir le crédit.</p>
+            </blockquote>
         </article>
-
-        <nav class="article-navigation">
-            <a href="accueil.html" class="btn">← Retour à l'accueil</a>
-            <a href="article2.html" class="btn">Article suivant →</a>
-        </nav>
     </main>
 
     <footer>
-        <p>&copy; 2025 Projet SAE 105. Tous droits réservés.</p>
+        <div class="footer-logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        
+        <nav class="footer-menu">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                <li><a href="a-propos.html">A PROPOS</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+            </ul>
+        </nav>
+        
+        <div class="footer-contact">
+            <h2>CONTACT</h2>
+            <p>DÉPARTEMENT MMI</p>
+            <p>4 PL. LUCIEN THARRADIN</p>
+            <p>25200 MONTBÉLIARD</p>
+            <p>03 81 99 47 34</p>
+        </div>
+        
+        <div class="footer-social">
+            <h2>NOUS SUIVRE</h2>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="YouTube">y</a>
+            </div>
+        </div>
+        
+        <p class="footer-credits">PROJET RÉALISÉ PAR HAMDI RAHMA (TPA3) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL</p>
     </footer>
 </body>
 </html>

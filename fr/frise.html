@@ -3,88 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frise chronologique - Projet SAE 105</title>
+    <title>Frise Chronologique - Projet SAE 105</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="article1.html">Article 1</a></li>
-                <li><a href="article2.html">Article 2</a></li>
-                <li><a href="article3.html">Article 3</a></li>
-                <li><a href="article4.html">Article 4</a></li>
-                <li><a href="article5.html">Article 5</a></li>
-                <li><a href="frise.html" class="active">Frise</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="autres-projet.html">Autres projets</a></li>
-            </ul>
-        </nav>
+        <button>EN</button>
+        <div class="logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        <button class="menu-toggle">☰</button>
     </header>
 
     <main>
-        <section class="page-header">
-            <h1>Frise chronologique</h1>
-            <p>Découvrez les événements importants dans l'ordre chronologique.</p>
+        <section>
+            <h1>FRISE CHRONOLOGIQUE</h1>
+            
+            <p>Depuis des siècles, des femmes ont contribué à la science, souvent dans l'ombre. Cette frise retrace leur parcours, de l'effacement à la reconnaissance, à travers l'histoire. Du Moyen Âge à aujourd'hui, découvrez celles qui ont fait avancer la connaissance, souvent sans jamais recevoir le crédit qu'elles méritaient.</p>
         </section>
 
         <section class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2020</div>
+            <div class="timeline-axis"></div>
+            
+            <div class="timeline-entry right">
+                <div class="timeline-year">1847</div>
                 <div class="timeline-content">
-                    <h3>Événement 1</h3>
-                    <p>Description de l'événement qui s'est produit en 2020.</p>
+                    <img src="images/marie-curie.jpg" alt="Marie Curie" />
+                    <h2>MARIE CURIE</h2>
+                    <p>Première femme à recevoir un prix Nobel. Ses recherches sur la radioactivité ont révolutionné la médecine et la physique. Malgré son génie, elle a longtemps été réduite à "l'assistante" de son mari.</p>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2021</div>
+            <div class="timeline-entry left">
+                <div class="timeline-year">1915</div>
                 <div class="timeline-content">
-                    <h3>Événement 2</h3>
-                    <p>Description de l'événement qui s'est produit en 2021.</p>
+                    <img src="images/alice-ball.jpg" alt="Alice Ball" />
+                    <h2>ALICE BALL</h2>
+                    <p>À seulement 23 ans, elle met au point le traitement le plus efficace contre la lèpre. Sa découverte, la "Ball Method", sera utilisée pendant des décennies sans qu'elle en soit créditée.</p>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2022</div>
+            <div class="timeline-entry right">
+                <div class="timeline-year">1920</div>
                 <div class="timeline-content">
-                    <h3>Événement 3</h3>
-                    <p>Description de l'événement qui s'est produit en 2022.</p>
+                    <img src="images/lise-meitner.jpg" alt="Lise Meitner" />
+                    <h2>LISE MEITNER</h2>
+                    <p>A co-découvert la fission nucléaire, mais le Nobel est attribué uniquement à Otto Hahn. Un exemple emblématique de l'Effet Matilda.</p>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2023</div>
+            <div class="timeline-entry left">
+                <div class="timeline-year">1950</div>
                 <div class="timeline-content">
-                    <h3>Événement 4</h3>
-                    <p>Description de l'événement qui s'est produit en 2023.</p>
+                    <img src="images/rosalind-franklin.jpg" alt="Rosalind Franklin" />
+                    <h2>ROSALIND FRANKLIN</h2>
+                    <p>Ses clichés aux rayons X ont permis de comprendre la structure de l'ADN. Crédits et Nobel sont attribués à Watson et Crick sans la mentionner.</p>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2024</div>
+            <div class="timeline-entry right">
+                <div class="timeline-year">1960</div>
                 <div class="timeline-content">
-                    <h3>Événement 5</h3>
-                    <p>Description de l'événement qui s'est produit en 2024.</p>
+                    <img src="images/katherine-johnson.jpg" alt="Katherine Johnson" />
+                    <h2>KATHERINE JOHNSON</h2>
+                    <p>Ses calculs précis ont rendu possibles les premières missions spatiales américaines. Longtemps ignorée à cause de sa couleur de peau et de son genre, elle sera honorée tardivement par la NASA.</p>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">2025</div>
+            <div class="timeline-entry left">
+                <div class="timeline-year">1970</div>
                 <div class="timeline-content">
-                    <h3>Événement 6</h3>
-                    <p>Description de l'événement qui s'est produit en 2025.</p>
+                    <img src="images/mae-jemison.jpg" alt="Mae Jemison" />
+                    <h2>MAE JEMISON</h2>
+                    <p>Première femme noire astronaute à voyager dans l'espace. Elle milite aujourd'hui pour plus de diversité dans les sciences.</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry right">
+                <div class="timeline-year">1985</div>
+                <div class="timeline-content">
+                    <img src="images/donna-strickland.jpg" alt="Donna Strickland" />
+                    <h2>DONNA STRICKLAND</h2>
+                    <p>Prix Nobel 2018 pour ses travaux sur les lasers ultracourts. Première femme à obtenir ce prix depuis plus de 50 ans.</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry left">
+                <div class="timeline-year">2000</div>
+                <div class="timeline-content">
+                    <img src="images/doudna-charpentier.jpg" alt="Jennifer Doudna et Emmanuelle Charpentier" />
+                    <h2>JENNIFER DOUDNA ET EMMANUELLE CHARPENTIER</h2>
+                    <p>Leur invention a révolutionné l'édition du génome humain. Première équipe 100 % féminine à remporter un Nobel scientifique.</p>
                 </div>
             </div>
         </section>
+
+        <div class="timeline-conclusion">
+            <div class="conclusion-box">
+                <p>L'Histoire de la science s'écrit souvent au masculin. Mais chaque nom ici inscrit prouve qu'une autre mémoire est possible : celle où les femmes ont leur place, leurs découvertes, et leur voix.</p>
+            </div>
+            
+            <a href="#" class="voir-plus">→ VOIR PLUS</a>
+            
+            <blockquote>
+                <p>« La mémoire est le premier pas vers la justice. »</p>
+            </blockquote>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Projet SAE 105. Tous droits réservés.</p>
+        <div class="footer-logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        
+        <nav class="footer-menu">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                <li><a href="a-propos.html">A PROPOS</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+            </ul>
+        </nav>
+        
+        <div class="footer-contact">
+            <h2>CONTACT</h2>
+            <p>DÉPARTEMENT MMI</p>
+            <p>4 PL. LUCIEN THARRADIN</p>
+            <p>25200 MONTBÉLIARD</p>
+            <p>03 81 99 47 34</p>
+        </div>
+        
+        <div class="footer-social">
+            <h2>NOUS SUIVRE</h2>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="YouTube">y</a>
+            </div>
+        </div>
+        
+        <p class="footer-credits">PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL</p>
     </footer>
 </body>
 </html>
+
 
