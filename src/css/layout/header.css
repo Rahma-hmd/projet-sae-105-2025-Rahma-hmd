@@ -16,7 +16,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-} 
+}
 
 .logo-small {
   width: 140px;
@@ -28,6 +28,7 @@ header {
   .logo-small {
     width: 96px;
   }
+
   .logo {
     top: 46%;
   }
@@ -41,11 +42,14 @@ header {
 }
 
 @media (max-width: 480px) {
+
   .menu-toggle img,
   .lang-toggle img {
     width: 28px;
   }
-}header button {
+}
+
+header button {
   background: transparent;
   border-radius: 999px;
   border: 1px solid var(--color-text-dark);
@@ -99,5 +103,3 @@ header {
     min-height: 28px;
   }
 }
-
-
