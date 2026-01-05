@@ -138,7 +138,8 @@
             </article>
 
             <article class="carte-lien">
-                <img src="../assets/img/galerieacceuil.avif" alt="Écrans de télévision affichant des images scientifiques">
+                <img src="../assets/img/galerieacceuil.avif"
+                    alt="Écrans de télévision affichant des images scientifiques">
                 <div class="carte-contenu">
                     <h3>Galerie</h3>
                     <p>Explorer la galerie de films et de livres.</p>
@@ -160,9 +161,8 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-left">
-                <div class="footer-logo">
-                    <span class="logo-ball">Ball</span>
-                    <span class="logo-alice">Alice</span>
+                <div class="footer-small-logo">
+                    <img src="../assets/img/logopetit.avif" alt="Logo" />
                 </div>
 
                 <nav class="footer-menu">
@@ -188,17 +188,21 @@
                 <div class="footer-social">
                     <h2>NOUS SUIVRE</h2>
                     <div class="social-icons">
-                        <a href="#" class="social-link" aria-label="Facebook" title="Facebook">
-                            <img src="../assets/img/facebook.svg" alt="Facebook" />
+                        <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR" class="social-link"
+                            aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/facebook.avif" alt="Facebook" />
                         </a>
-                        <a href="#" class="social-link" aria-label="Instagram" title="Instagram">
-                            <img src="../assets/img/instagram.svg" alt="Instagram" />
+                        <a href="https://www.instagram.com/mmi_montbeliard/" class="social-link" aria-label="Instagram"
+                            title="Instagram" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/instagram.avif" alt="Instagram" />
                         </a>
-                        <a href="#" class="social-link" aria-label="Twitter" title="Twitter">
-                            <img src="../assets/img/twitter.svg" alt="Twitter" />
+                        <a href="https://x.com/MMImontbeliard/with_replies" class="social-link" aria-label="Twitter"
+                            title="Twitter" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/twitter.avif" alt="Twitter" />
                         </a>
-                        <a href="#" class="social-link" aria-label="YouTube" title="YouTube">
-                            <img src="../assets/img/youtube.svg" alt="YouTube" />
+                        <a href="https://www.youtube.com/channel/UCgW7jR8McJwjxPh0fDQaXGg/videos" class="social-link"
+                            aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/youtube.avif" alt="YouTube" />
                         </a>
                     </div>
                 </div>
@@ -206,76 +210,16 @@
         </div>
 
         <div class="footer-credits">
-            PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL
+            PROJET RÉALISÉ PAR HAMDI RAHMA DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 -
+            L'EFFET MATILDA
         </div>
     </footer>
 
     <script>
         // Accordéon "L'effet Matilda : c'est quoi ?"
-        document.addEventListener('DOMContentLoaded', function () {
-            const accordeon = document.querySelector('.accordeon');
-            if (accordeon) {
-                const headerButton = accordeon.querySelector('.accordeon-header');
-                if (headerButton) {
-                    headerButton.addEventListener('click', function () {
-                        accordeon.classList.toggle('accordeon--open');
-                    });
-                }
-            }
 
-            // Carousel d'articles (scroll-based)
-            const carousel = document.querySelector('.carousel-articles');
-            if (carousel) {
-                const track = carousel.querySelector('.carousel-track');
-                const slides = Array.from(track.querySelectorAll('.carousel-slide'));
-                const prevBtn = carousel.querySelector('.carousel-arrow--prev');
-                const nextBtn = carousel.querySelector('.carousel-arrow--next');
-                let current = 0;
-                let autoTimer = null;
-
-                function scrollToIndex(index) {
-                    const n = (index + slides.length) % slides.length;
-                    track.scrollTo({ left: slides[n].offsetLeft, behavior: 'smooth' });
-                    current = n;
-                }
-
-                function startAuto() {
-                    if (autoTimer) clearInterval(autoTimer);
-                    autoTimer = setInterval(function () {
-                        scrollToIndex(current + 1);
-                    }, 5000);
-                }
-
-                function restartAuto() {
-                    startAuto();
-                }
-
-                if (prevBtn && nextBtn && slides.length) {
-                    prevBtn.addEventListener('click', function () {
-                        scrollToIndex(current - 1);
-                        restartAuto();
-                    });
-                    nextBtn.addEventListener('click', function () {
-                        scrollToIndex(current + 1);
-                        restartAuto();
-                    });
-
-                    // update current index on manual scroll
-                    let scrollTimeout = null;
-                    track.addEventListener('scroll', function () {
-                        if (scrollTimeout) clearTimeout(scrollTimeout);
-                        scrollTimeout = setTimeout(function () {
-                            const idx = Math.round(track.scrollLeft / track.clientWidth);
-                            current = Math.min(Math.max(idx, 0), slides.length - 1);
-                        }, 100);
-                    });
-
-                    // lancement auto au chargement
-                    startAuto();
-                }
-            }
-        });
     </script>
+    <script src="../src/js/script.js" defer></script>
 </body>
 
 </html>
