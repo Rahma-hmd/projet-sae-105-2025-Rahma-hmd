@@ -21,6 +21,30 @@
         </button>
     </header>
 
+    <!-- Off-canvas menu -->
+    <div id="menuOverlay" class="menu-overlay" hidden></div>
+    <nav id="siteMenu" class="offcanvas-menu" aria-hidden="true" aria-label="Menu principal">
+        <div class="menu-header">
+            <img src="../assets/img/logopetit.avif" alt="Logo" class="menu-logo" />
+            <button class="menu-close" aria-label="Fermer le menu">✕</button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li>
+                <button class="menu-accordion" aria-expanded="false" aria-controls="submenu-articles">Articles</button>
+                <ul id="submenu-articles" class="submenu" hidden>
+                    <li><a href="article1.html">Alice Ball, la chimiste oubliée</a></li>
+                    <li><a href="article2.html">La méthode Ball</a></li>
+                    <li><a href="article3.html">Femmes noires &amp; science</a></li>
+                </ul>
+            </li>
+            <li><a href="frise.html">Frise chronologique</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav> 
+
     <main>
         <!-- Bloc d'ouverture : titre + visuel principal -->
         <article>
