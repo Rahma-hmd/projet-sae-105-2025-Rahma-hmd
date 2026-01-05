@@ -1,0 +1,312 @@
+:root {
+    --menu-width: 320px;
+    --menu-bg: var(--color-beige);
+    --menu-text: var(--color-brown);
+    --menu-z: 1000;
+}
+
+/* Ensure menu uses site typography */
+.offcanvas-menu {
+    font-family: 'Harmattan', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--menu-text);
+}
+
+.menu-list a,
+.menu-accordion,
+.submenu a {
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.menu-articles h4 {
+    font-family: 'Albertus Nova', Georgia, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin: 0.45rem 0 0 0;
+}
+
+/* Menu articles carousel */
+.menu-articles {
+    margin-top: 0.6rem;
+}
+
+.menu-articles-track {
+    display: flex;
+    gap: 0.6rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.6rem;
+}
+
+.menu-article {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
+    background: transparent;
+}
+
+.menu-article img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+.menu-articles-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.menu-articles-controls button {
+    background: transparent;
+    border: 1px solid var(--menu-text);
+    color: var(--menu-text);
+    padding: 0.35rem 0.55rem;
+    border-radius: 4px;
+}
+
+/* Improve keyboard focus */
+.menu-articles-track:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.08);
+}
+
+
+/* Overlay */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease, visibility 200ms ease;
+    z-index: calc(var(--menu-z) - 10);
+}
+
+.menu-overlay[hidden] {
+    display: none;
+}
+
+/* Off-canvas panel */
+.offcanvas-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--menu-width);
+    max-width: 90vw;
+    background: var(--menu-bg);
+    color: var(--menu-text);
+    transform: translateX(-110%);
+    transition: transform 300ms cubic-bezier(.2, .9, .2, 1);
+    box-shadow: 2px 0 24px rgba(0, 0, 0, 0.16);
+    z-index: var(--menu-z);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.offcanvas-menu[aria-hidden="false"] {
+    transform: translateX(0);
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-logo {
+    width: 96px;
+    height: auto;
+}
+
+.menu-close {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.menu-list {
+    margin-top: 1.25rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-list a,
+.menu-accordion {
+    display: block;
+    padding: 0.6rem 0.4rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    text-align: left;
+    width: 100%;
+}
+
+.menu-accordion {
+    cursor: pointer;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 0.8rem;
+    margin: 0.4rem 0 0 0;
+    display: block;
+}
+
+.submenu[hidden] {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    :root {
+        --menu-width: 80vw;
+    }
+
+    .menu-logo {
+        width: 64px;
+    }
+}
+
+/* When menu open */
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Chevron for accordion */
+.menu-accordion {
+    position: relative;
+}
+
+.menu-accordion::after {
+    content: "▾";
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 220ms ease;
+    font-size: 1rem;
+}
+
+.menu-accordion[aria-expanded="true"]::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Remove default separators and use subtle separators */
+.menu-list li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 0.25rem;
+}
+
+/* Improve visual rhythm to match PDF */
+.menu-list a,
+.menu-accordion {
+    display: block;
+    padding: 0.9rem 0.4rem;
+    font-size: 0.95rem;
+}
+
+/* menu header styling to match PDF */
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.menu-logo {
+    width: 88px;
+}
+
+.menu-close {
+    font-size: 1.15rem;
+}
+
+/* menu carousel fine tuning */
+.menu-articles {
+    margin-top: 0.6rem;
+}
+
+.menu-articles-track {
+    display: flex;
+    gap: 0.6rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.6rem;
+    scroll-behavior: smooth;
+}
+
+.menu-articles-track::-webkit-scrollbar {
+    height: 8px;
+}
+
+.menu-articles-track::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+}
+
+.menu-article {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
+    background: transparent;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.menu-article img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.menu-articles-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.menu-articles-controls button {
+    background: transparent;
+    border: 1px solid var(--menu-text);
+    color: var(--menu-text);
+    padding: 0.35rem 0.55rem;
+    border-radius: 4px;
+}
+
+/* Improved focus states */
+.menu-list a:focus,
+.menu-accordion:focus,
+.menu-close:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.12);
+    outline-offset: 2px;
+}
+
+/* Small visual tweaks */
+.offcanvas-menu a {
+    color: var(--menu-text);
+}
+
+.offcanvas-menu a:hover,
+.offcanvas-menu button:hover {
+    opacity: 0.9;
+}
