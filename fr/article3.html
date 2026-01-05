@@ -1,79 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Femmes Noires et Science : Une Double Invisibilité - Projet SAE 105</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Femmes noires & science — Une double invisibilité</title>
+    <link rel="stylesheet" href="../src/css/style.css">
 </head>
+
 <body>
     <header>
-        <button>EN</button>
+        <button class="lang-toggle" aria-label="Changer la langue">
+            <img src="../assets/img/EN.svg" alt="EN" />
+        </button>
         <div class="logo">
-            <span class="logo-ball">Ball</span>
-            <span class="logo-alice">Alice</span>
+            <img src="../assets/img/logopetit.avif" alt="Logo" class="logo-small" />
         </div>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <img src="../assets/img/menuliste.svg" alt="Menu" />
+        </button>
     </header>
 
+    <!-- Off-canvas menu -->
+    <div id="menuOverlay" class="menu-overlay" hidden></div>
+    <nav id="siteMenu" class="offcanvas-menu" aria-hidden="true" aria-label="Menu principal">
+        <div class="menu-header">
+            <img src="../assets/img/logopetit.avif" alt="Logo" class="menu-logo" />
+            <button class="menu-close" aria-label="Fermer le menu">✕</button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li>
+                <button class="menu-accordion" aria-expanded="false" aria-controls="submenu-articles">Articles</button>
+                <ul id="submenu-articles" class="submenu" hidden>
+                    <li><a href="article1.html">Alice Ball, la chimiste oubliée</a></li>
+                    <li><a href="article2.html">La méthode Ball</a></li>
+                    <li><a href="article3.html">Femmes noires &amp; science</a></li>
+                </ul>
+            </li>
+            <li><a href="frise.html">Frise chronologique</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <article>
-            <h1>FEMMES NOIRES ET SCIENCE : UNE DOUBLE INVISIBILITÉ</h1>
-            
-            <h2>Quand le genre et la couleur de peau deviennent des barrières invisibles dans le monde scientifique.</h2>
-            
-            <img src="images/femme-noire-science.jpg" alt="Femme noire scientifique en laboratoire" />
-            
-            <p>À l'époque d'Alice Ball, les femmes scientifiques devaient déjà lutter contre le sexisme. Mais pour les femmes noires, le défi était encore plus grand : le courant dominant ne reconnaissait pas leurs capacités, assimilant volontiers leurs contributions à celles des hommes.</p>
-            
-            <p>Alice Ball est un cas emblématique : malgré l'importance de ses découvertes, ses travaux sont attribués ultérieurement à des collègues masculins. Une double invisibilisation opérée à la fois par omission et appropriation.</p>
-            
-            <p>D'autres femmes noires comme Henrietta Lacks ou Katherine Johnson ont subi des mésestimations similaires, des histoires souvent redécouvertes tardivement. Cette invisibilité structurelle est au cœur de l'effet Matilda.</p>
-            
-            <a href="#" class="voir-plus">VOIR PLUS</a>
-            
-            <blockquote>
-                <p>Quand une femme noire découvre, l'Histoire oublie souvent de signer son nom.</p>
-            </blockquote>
+        <article class="article-page">
+            <h1>FEMMES NOIRES &amp; SCIENCE :
+                <span class="article-title-sub">UNE DOUBLE INVISIBILITÉ</span>
+            </h1>
+
+            <figure class="hero">
+                <img src="../assets/img/femmenoirhero.avif" alt="Femme noire scientifique en laboratoire">
+            </figure>
+
+            <p class="lead">Quand le genre et la couleur de peau deviennent des barrières invisibles dans le monde
+                scientifique.</p>
+
+            <div class="article-body">
+                <h3>Problématique</h3>
+                <p>Au début du XXᵉ siècle, les femmes en science font face au sexisme institutionnel — pour les femmes
+                    noires, s'ajoute le racisme, créant une double barrière à la reconnaissance.</p>
+
+                <h3>Exemples et conséquences</h3>
+                <p>Alice Ball illustre cette invisibilisation : malgré des avancées majeures, ses travaux sont souvent
+                    attribués à ses collègues masculins.</p>
+                <p>D'autres parcours (Henrietta Lacks, Katherine Johnson) montrent des dynamiques comparables :
+                    contributions non créditées, réhabilitations tardives.</p>
+
+                <h3>Vers la reconnaissance</h3>
+                <p>Nombre d'histoires sont aujourd'hui réexaminées et mises en lumière, mais la réparation reste
+                    partielle ; mieux documenter et enseigner ces récits est essentiel pour corriger l'histoire.</p>
+
+                <a href="#" class="voir-plus">→ VOIR PLUS</a>
+
+                <blockquote class="article-quote">
+                    <p>Quand une femme noire découvre, l'Histoire oublie souvent de signer son nom.</p>
+                </blockquote>
+            </div>
         </article>
     </main>
 
     <footer>
-        <div class="footer-logo">
-            <span class="logo-ball">Ball</span>
-            <span class="logo-alice">Alice</span>
+        <div class="footer-small-logo">
+            <img src="../assets/img/logopetit.avif" alt="Logo" />
         </div>
-        
-        <nav class="footer-menu">
-            <h2>MENU</h2>
-            <ul>
-                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
-                <li><a href="a-propos.html">A PROPOS</a></li>
-                <li><a href="contact.html">CONTACTS</a></li>
-                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
-            </ul>
-        </nav>
-        
-        <div class="footer-contact">
-            <h2>CONTACT</h2>
-            <p>DÉPARTEMENT MMI</p>
-            <p>4 PL. LUCIEN THARRADIN</p>
-            <p>25200 MONTBÉLIARD</p>
-            <p>03 81 99 47 34</p>
-        </div>
-        
-        <div class="footer-social">
-            <h2>NOUS SUIVRE</h2>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">i</a>
-                <a href="#" aria-label="Twitter">t</a>
-                <a href="#" aria-label="YouTube">y</a>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <nav class="footer-menu">
+                    <h2>MENU</h2>
+                    <ul>
+                        <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                        <li><a href="a-propos.html">A PROPOS</a></li>
+                        <li><a href="contact.html">CONTACTS</a></li>
+                        <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-contact">
+                    <h2>CONTACT</h2>
+                    <p>DÉPARTEMENT MMI</p>
+                    <p>4 PL. LUCIEN THARRADIN</p>
+                    <p>25200 MONTBÉLIARD</p>
+                    <p>03 81 99 47 34</p>
+                </div>
+
+                <div class="footer-social">
+                    <h2>NOUS SUIVRE</h2>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR" class="social-link"
+                            aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/facebook.avif" alt="Facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/mmi_montbeliard/" class="social-link" aria-label="Instagram"
+                            title="Instagram" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/instagram.avif" alt="Instagram" />
+                        </a>
+                        <a href="https://x.com/MMImontbeliard/with_replies" class="social-link" aria-label="Twitter"
+                            title="Twitter" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/twitter.avif" alt="Twitter" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCgW7jR8McJwjxPh0fDQaXGg/videos" class="social-link"
+                            aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/youtube.avif" alt="YouTube" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <p class="footer-credits">PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL</p>
-    </footer>
-</body>
-</html>
 
+        <div class="footer-credits">
+            PROJET RÉALISÉ PAR HAMDI RAHMA DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET
+            MATILDA
+        </div>
+    </footer>
+
+    <script src="../src/js/script.js" defer></script>
+</body>
+
+</html>
