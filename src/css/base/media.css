@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  main {
+    padding-inline: 4rem;
+  }
+
+  main > article,
+  .section-effet,
+  .section-plus,
+  .section-cartes {
+    max-width: 32rem;
+  }
+}
+
+

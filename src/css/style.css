@@ -1,332 +1,36 @@
-@import "layout/footer.css";
+/* Utils */
+@import url("utils/variables.css");
 
-/* ---------- Variables ---------- */
-:root {
-  --color-beige: #d9b98b;
-  --color-brown: #2b0505;
-  --color-text-light: #fdf7f0;
-  --color-text-dark: #111111;
-  --color-accent: #e0b266;
-}
+/* Vendors */
+@import url("vendors/normalize.css");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Base */
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/main.css");
+@import url("base/media.css");
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+/* Layout */
+@import url("layout/header.css");
+@import url("layout/hero.css");
+@import url("layout/menu.css");
+@import url("layout/footer.css");
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--color-text-light);
-  background-color: var(--color-brown);
-}
-
-a {
-  color: inherit;
-}
-
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-main {
-  background-color: var(--color-brown);
-  min-height: 100vh;
-  padding: 2rem 1.5rem 3rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Georgia", "Times New Roman", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-h1 {
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0 0 1.5rem;
-}
-
-h2 {
-  font-size: 1.1rem;
-  margin: 1.75rem 0 0.75rem;
-}
-
-h3 {
-  font-size: 1rem;
-  margin: 1.25rem 0 0.5rem;
-}
-
-p {
-  line-height: 1.5;
-  font-size: 0.95rem;
-  margin: 0 0 1rem;
-}
-
-blockquote {
-  margin: 2rem 0 0;
-  padding-left: 1.25rem;
-  border-left: 2px solid var(--color-accent);
-  font-style: italic;
-}
-
-.voir-plus,
-.btn-film,
-.btn-livre,
-button,
-input[type="submit"],
-button[type="submit"] {
-  display: inline-block;
-  padding: 0.6rem 1.7rem;
-  border-radius: 999px;
-  border: none;
-  background-color: var(--color-accent);
-  color: var(--color-text-dark);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.voir-plus:hover,
-.btn-film:hover,
-.btn-livre:hover,
-button:hover {
-  filter: brightness(0.95);
-}
-
-/* ---------- Header ---------- */
-
-header {
-  background-color: var(--color-beige);
-  color: var(--color-text-dark);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1.25rem;
-}
-
-header button {
-  background: transparent;
-  border-radius: 999px;
-  border: 1px solid var(--color-text-dark);
-  padding: 0.25rem 0.7rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.logo {
-  text-align: center;
-  font-family: "Georgia", "Times New Roman", serif;
-}
-
-.logo-ball {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.logo-alice {
-  font-size: 1.5rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.menu-toggle {
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ---------- Articles (pages 1–3) ---------- */
-
-article {
-  max-width: 28rem;
-  margin: 0 auto;
-}
-
-article img {
-  margin-inline: auto;
-  margin-bottom: 1.5rem;
-}
-
-article h2 {
-  text-align: center;
-}
-
-/* ---------- Frise chronologique ---------- */
-
-.timeline {
-  max-width: 28rem;
-  margin: 2.5rem auto 0;
-  position: relative;
-}
-
-.timeline-axis {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 0.5rem;
-  transform: translateX(-50%);
-  background-color: var(--color-beige);
-}
-
-.timeline-entry {
-  display: flex;
-  margin-bottom: 2.5rem;
-}
-
-.timeline-entry.left {
-  justify-content: flex-start;
-}
-
-.timeline-entry.right {
-  justify-content: flex-end;
-}
-
-.timeline-year {
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
-}
-
-.timeline-content {
-  background-color: rgba(0, 0, 0, 0.25);
-  padding: 0.75rem;
-  max-width: 12rem;
-}
-
-.timeline-content img {
-  margin-bottom: 0.75rem;
-}
-
-.timeline-conclusion {
-  max-width: 28rem;
-  margin: 2.5rem auto 0;
-}
-
-.timeline-conclusion .conclusion-box {
-  background-color: var(--color-beige);
-  color: var(--color-text-dark);
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.timeline-conclusion blockquote {
-  border-left-color: var(--color-beige);
-}
-
-/* ---------- Glossaire ---------- */
-
-.glossary {
-  max-width: 28rem;
-  margin: 2rem auto 0;
-}
-
-.glossary article + article {
-  margin-top: 1.5rem;
-}
-
-/* ---------- Galerie ---------- */
-
-.galerie-films,
-.galerie-livres {
-  max-width: 28rem;
-  margin: 2rem auto 0;
-}
-
-.galerie-films article,
-.galerie-livres article {
-  margin-bottom: 2rem;
-}
-
-.galerie-conclusion {
-  max-width: 28rem;
-  margin: 2rem auto 0;
-  font-size: 0.9rem;
-}
-
-/* ---------- Contact ---------- */
-
-form {
-  max-width: 26rem;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 1.25rem;
-}
-
-label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 0.6rem 0.75rem;
-  border-radius: 0.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: transparent;
-  color: var(--color-text-light);
-  font-size: 0.9rem;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-textarea {
-  resize: vertical;
-}
-
-button[type="submit"] {
-  width: 9rem;
-  margin: 0 auto;
-  display: block;
-}
-
-/* ---------- Responsive ---------- */
-
-@media (min-width: 768px) {
-  main {
-    padding-inline: 4rem;
-  }
-
-  article,
-  .timeline,
-  .glossary,
-  .galerie-films,
-  .galerie-livres,
-  .galerie-conclusion,
-  form {
-    max-width: 32rem;
-  }
-}
+/* Components */
+@import url("components/boutons.css");
+@import url("components/section.css");
+@import url("components/article.css");
+@import url("components/carrousel.css");
+@import url("components/liste.css");
+@import url("components/cardequipe.css");
+@import url("components/artistes.css");
+@import url("components/templateartiste.css");
+@import url("components/pricing.css");
+@import url("components/hebergements.css");
+@import url("components/contact.css");
+@import url("components/formulaire.css");
+@import url("components/scene.css");
+@import url("components/page404.css");
+@import url("components/filters.css");
 
 

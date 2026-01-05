@@ -1,0 +1,46 @@
+header {
+  background-color: var(--color-beige);
+  color: var(--color-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+header button {
+  background: transparent;
+  border-radius: 999px;
+  border: 1px solid var(--color-text-dark);
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.logo {
+  text-align: center;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+.logo-ball {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.logo-alice {
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

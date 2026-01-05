@@ -1,51 +1,245 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Projet SAE 105</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Accueil - L'Effet Matilda</title>
+    <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="accueil.html" class="active">Accueil</a></li>
-                <li><a href="article1.html">Article 1</a></li>
-                <li><a href="article2.html">Article 2</a></li>
-                <li><a href="article3.html">Article 3</a></li>
-                <li><a href="article4.html">Article 4</a></li>
-                <li><a href="article5.html">Article 5</a></li>
-                <li><a href="frise.html">Frise</a></li>
-                <li><a href="glossaire.html">Glossaire</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="autres-projet.html">Autres projets</a></li>
-            </ul>
-        </nav>
+        <button>EN</button>
+        <div class="logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
     </header>
 
     <main>
-        <section>
-            <h1>Effet Matilda : c'est quoi ? ☑</h1>
-            <p>L'effet Matilda désigne la tendance à afficher des découvertes des femmes au profit de leurs collègues masculins. Les femmes modifient leurs requêtes à travers le stress d'effet Matilda.</p>
+        <!-- Bloc d'ouverture : titre + visuel principal -->
+        <article>
+            <h1>L’EFFET MATILDA</h1>
+            <img src="images/accueil-alice-portrait.jpg" alt="Portrait d’Alice Ball dans son laboratoire">
+            <p class="carte-legende">
+                Alice Ball : la scientifique qui a sauvé de nombreuses vies, tombée dans l’oubli.
+            </p>
+        </article>
+
+        <!-- Section : définition de l’effet Matilda avec accordéon -->
+        <section class="section-effet accordeon accordeon--open">
+            <button class="accordeon-header" type="button">
+                <h2>L’effet Matilda : c’est quoi ?</h2>
+                <span class="accordeon-icon" aria-hidden="true">⌄</span>
+                <span class="sr-only">Afficher ou masquer la définition de l’Effet Matilda</span>
+            </button>
+
+            <div class="accordeon-panel">
+                <div class="effet-contenu">
+                    <div class="effet-texte">
+                        <p>
+                            L’Effet Matilda désigne la tendance à effacer les découvertes des femmes
+                            au profit de leurs collègues masculins. Ce site explore cette injustice
+                            à travers le destin d’Alice Ball.
+                        </p>
+                    </div>
+                    <figure class="effet-image">
+                        <img src="../assets/img/accordeon%20image.avif" alt="Alice Ball en tenue de scientifique avec du matériel de laboratoire">
+                    </figure>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <!-- Carousel d’articles avant "Pour aller plus loin" -->
+        <section class="carousel-articles">
+            <div class="carousel-track">
+                <!-- Slide 1 -->
+                <article class="carousel-slide is-active">
+                    <a href="article1.html" class="carousel-card">
+                        <img src="../assets/img/carousel1.avif" alt="Alice Ball, la chimiste oubliée">
+                        <div class="carousel-legend">
+                            <h3>Alice Ball, la chimiste oubliée</h3>
+                            <p>À 23 ans, elle révolutionne le traitement de la lèpre ; l’Histoire l’oublie.</p>
+                            <span class="carousel-cta">→ LIRE LA SUITE</span>
+                        </div>
+                    </a>
+                </article>
+                <!-- Slide 2 -->
+                <article class="carousel-slide">
+                    <a href="article2.html" class="carousel-card">
+                        <img src="../assets/img/carousel2.avif" alt="La méthode Ball">
+                        <div class="carousel-legend">
+                            <h3>La méthode Ball</h3>
+                            <p>Comprendre comment une scientifique a transformé un traitement impossible.</p>
+                            <span class="carousel-cta">→ LIRE LA SUITE</span>
+                        </div>
+                    </a>
+                </article>
+                <!-- Slide 3 -->
+                <article class="carousel-slide">
+                    <a href="article3.html" class="carousel-card">
+                        <img src="../assets/img/carousel3.avif" alt="Femmes noires et science">
+                        <div class="carousel-legend">
+                            <h3>Femmes noires &amp; science</h3>
+                            <p>Le racisme et le sexisme effacent leurs contributions majeures.</p>
+                            <span class="carousel-cta">→ LIRE LA SUITE</span>
+                        </div>
+                    </a>
+                </article>
+                <!-- Slide 4 (pas de lien) -->
+                <article class="carousel-slide">
+                    <div class="carousel-card">
+                        <img src="../assets/img/carousel4.avif" alt="De la science à l’écran">
+                        <div class="carousel-legend">
+                            <h3>De la science à l’écran</h3>
+                            <p>Quand la fiction raconte – ou oublie – les femmes scientifiques.</p>
+                            <span class="carousel-cta">→ LIRE LA SUITE</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Slide 5 (pas de lien) -->
+                <article class="carousel-slide">
+                    <div class="carousel-card">
+                        <img src="../assets/img/carousel5.avif" alt="Mémoire &amp; savoir">
+                        <div class="carousel-legend">
+                            <h3>Mémoire &amp; savoir</h3>
+                            <p>Le travail invisible qui permet de construire la mémoire des sciences.</p>
+                            <span class="carousel-cta">→ LIRE LA SUITE</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button class="carousel-arrow carousel-arrow--prev" type="button" aria-label="Article précédent">←</button>
+            <button class="carousel-arrow carousel-arrow--next" type="button" aria-label="Article suivant">→</button>
+        </section>
+
+        <!-- Titre "Pour aller plus loin" -->
+        <section class="section-plus">
             <h2>POUR ALLER PLUS LOIN</h2>
         </section>
 
-        <section>
-            <h2>Alice</h2>
-            <p><a href="http://www.aice.com">www.aice.com</a></p>
-            <p><a href="http://www.aice.com">www.aice.com</a></p>
-            <p><a href="http://www.aice.com">www.aice.com</a></p>
+        <!-- Cartes vers les autres pages -->
+        <section class="section-cartes">
+            <article class="carte-lien">
+                <img src="images/accueil-frise.jpg" alt="Photographie scientifique en laboratoire">
+                <div class="carte-contenu">
+                    <h3>Frise chronologique</h3>
+                    <p>Découvrir d’autres femmes scientifiques oubliées.</p>
+                    <a href="frise.html" class="voir-plus">→ VOIR LA PAGE</a>
+                </div>
+            </article>
+
+            <article class="carte-lien">
+                <img src="images/accueil-galerie.jpg" alt="Écrans de télévision affichant des images scientifiques">
+                <div class="carte-contenu">
+                    <h3>Galerie</h3>
+                    <p>Explorer la galerie de films et de livres.</p>
+                    <a href="galerie.html" class="voir-plus">→ VOIR LA PAGE</a>
+                </div>
+            </article>
+
+            <article class="carte-lien">
+                <img src="images/accueil-glossaire.jpg" alt="Machine à écrire et dossiers empilés">
+                <div class="carte-contenu">
+                    <h3>Glossaire</h3>
+                    <p>Comprendre les notions clés de l’Effet Matilda.</p>
+                    <a href="glossaire.html" class="voir-plus">→ VOIR LA PAGE</a>
+                </div>
+            </article>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Projet SAE 105. Tous droits réservés.</p>
+        <div class="footer-logo">
+            <span class="logo-ball">Ball</span>
+            <span class="logo-alice">Alice</span>
+        </div>
+
+        <nav class="footer-menu">
+            <h2>MENU</h2>
+            <ul>
+                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                <li><a href="a-propos.html">A PROPOS</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-contact">
+            <h2>CONTACT</h2>
+            <p>DÉPARTEMENT MMI</p>
+            <p>4 PL. LUCIEN THARRADIN</p>
+            <p>25200 MONTBÉLIARD</p>
+            <p>03 81 99 47 34</p>
+        </div>
+
+        <div class="footer-social">
+            <h2>NOUS SUIVRE</h2>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">i</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="YouTube">y</a>
+            </div>
+        </div>
+
+        <p class="footer-credits">
+            PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL
+        </p>
     </footer>
+
+    <script>
+      // Accordéon "L'effet Matilda : c'est quoi ?"
+      document.addEventListener('DOMContentLoaded', function () {
+        const accordeon = document.querySelector('.accordeon');
+        if (accordeon) {
+          const headerButton = accordeon.querySelector('.accordeon-header');
+          if (headerButton) {
+            headerButton.addEventListener('click', function () {
+              accordeon.classList.toggle('accordeon--open');
+            });
+          }
+        }
+
+        // Carousel d'articles
+        const carousel = document.querySelector('.carousel-articles');
+        if (carousel) {
+          const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+          const prevBtn = carousel.querySelector('.carousel-arrow--prev');
+          const nextBtn = carousel.querySelector('.carousel-arrow--next');
+          let index = 0;
+          let autoTimer = null;
+
+          function showSlide(newIndex) {
+            slides[index].classList.remove('is-active');
+            index = (newIndex + slides.length) % slides.length;
+            slides[index].classList.add('is-active');
+          }
+
+          function startAuto() {
+            if (autoTimer) clearInterval(autoTimer);
+            autoTimer = setInterval(function () {
+              showSlide(index + 1);
+            }, 5000);
+          }
+
+          if (prevBtn && nextBtn && slides.length) {
+            prevBtn.addEventListener('click', function () {
+              showSlide(index - 1);
+              startAuto();
+            });
+            nextBtn.addEventListener('click', function () {
+              showSlide(index + 1);
+              startAuto();
+            });
+
+            // lancement auto au chargement
+            startAuto();
+          }
+        }
+      });
+    </script>
 </body>
 </html>
-
