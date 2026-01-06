@@ -102,6 +102,24 @@ main>article img {
   object-fit: cover;
 }
 
+.hero figcaption,
+figure figcaption {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.galerie-films figure figcaption,
+.galerie-livres figure figcaption {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .lead {
   text-align: center;
   max-width: 36rem;
@@ -346,6 +364,16 @@ main>article img {
   height: auto;
   display: block;
   margin: 0 0 1rem;
+}
+
+.galerie-films article video,
+.galerie-livres article video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0 0.5rem;
+  border: 2px solid var(--color-beige);
 }
 
 .galerie-conclusion {
