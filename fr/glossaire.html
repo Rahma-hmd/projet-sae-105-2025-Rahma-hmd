@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossaire - Projet SAE 105</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Glossaire - L'Effet Matilda</title>
+    <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
     <header>
-        <button>EN</button>
+        <button class="lang-toggle" aria-label="Changer la langue">
+            <img src="../assets/img/EN.svg" alt="EN" />
+        </button>
         <div class="logo">
-            <span class="logo-ball">Ball</span>
-            <span class="logo-alice">Alice</span>
+            <img src="../assets/img/logopetit.avif" alt="Logo" class="logo-small" />
         </div>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <img src="../assets/img/menuliste.svg" alt="Menu" />
+        </button>
     </header>
 
+    <!-- Off-canvas menu -->
+    <div id="menuOverlay" class="menu-overlay" hidden></div>
+    <nav id="siteMenu" class="offcanvas-menu" aria-hidden="true" aria-label="Menu principal">
+        <div class="menu-header">
+            <img src="../assets/img/logopetit.avif" alt="Logo" class="menu-logo" />
+            <button class="menu-close" aria-label="Fermer le menu">✕</button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li>
+                <button class="menu-accordion" aria-expanded="false" aria-controls="submenu-articles">Articles</button>
+                <ul id="submenu-articles" class="submenu" hidden>
+                    <li><a href="article1.html">Alice Ball, la chimiste oubliée</a></li>
+                    <li><a href="article2.html">La méthode Ball</a></li>
+                    <li><a href="article3.html">Femmes noires &amp; science</a></li>
+                </ul>
+            </li>
+            <li><a href="frise.html">Frise chronologique</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
+        <section class="glossaire-page">
             <h1>GLOSSAIRE</h1>
 
-            <img src="images/glossaire-livres.jpg" alt="Pile de livres ouverts" />
+            <img src="../assets/img/glossairehero.avif" alt="Pile de livres ouverts" class="glossaire-hero" />
         </section>
 
         <div class="glossary">
@@ -50,51 +77,71 @@
             </article>
         </div>
 
-        <div>
-            <a href="#" class="voir-plus">→ VOIR PLUS</a>
+        <div class="glossaire-footer-content">
+            <a href="https://mrmondialisation.org/20-femmes-sciences-histoire/" class="voir-plus" target="_blank" rel="noopener noreferrer">→ VOIR PLUS</a>
 
-            <blockquote>
-                <p>“Nommer, c'est reconnaître ; reconnaître, c'est réparer.”</p>
+            <blockquote class="glossaire-quote">
+                <p>"Nommer, c'est reconnaître ; reconnaître, c'est réparer."</p>
             </blockquote>
         </div>
     </main>
 
     <footer>
-        <div class="footer-logo">
-            <span class="logo-ball">Ball</span>
-            <span class="logo-alice">Alice</span>
+        <div class="footer-small-logo">
+            <img src="../assets/img/logopetit.avif" alt="Logo" />
         </div>
-        
-        <nav class="footer-menu">
-            <h2>MENU</h2>
-            <ul>
-                <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
-                <li><a href="a-propos.html">A PROPOS</a></li>
-                <li><a href="contact.html">CONTACTS</a></li>
-                <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
-            </ul>
-        </nav>
-        
-        <div class="footer-contact">
-            <h2>CONTACT</h2>
-            <p>DÉPARTEMENT MMI</p>
-            <p>4 PL. LUCIEN THARRADIN</p>
-            <p>25200 MONTBÉLIARD</p>
-            <p>03 81 99 47 34</p>
-        </div>
-        
-        <div class="footer-social">
-            <h2>NOUS SUIVRE</h2>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">i</a>
-                <a href="#" aria-label="Twitter">t</a>
-                <a href="#" aria-label="YouTube">y</a>
+        <div class="footer-grid">
+            <div class="footer-left">
+                <nav class="footer-menu">
+                    <h2>MENU</h2>
+                    <ul>
+                        <li><a href="mentions-legales.html">MENTIONS LÉGALES</a></li>
+                        <li><a href="a-propos.html">A PROPOS</a></li>
+                        <li><a href="contact.html">CONTACTS</a></li>
+                        <li><a href="autres-projet.html">AUTRES PROJETS</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-contact">
+                    <h2>CONTACT</h2>
+                    <p>DÉPARTEMENT MMI</p>
+                    <p>4 PL. LUCIEN THARRADIN</p>
+                    <p>25200 MONTBÉLIARD</p>
+                    <p>03 81 99 47 34</p>
+                </div>
+
+                <div class="footer-social">
+                    <h2>NOUS SUIVRE</h2>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR" class="social-link"
+                            aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/facebook.avif" alt="Facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/mmi_montbeliard/" class="social-link" aria-label="Instagram"
+                            title="Instagram" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/instagram.avif" alt="Instagram" />
+                        </a>
+                        <a href="https://x.com/MMImontbeliard/with_replies" class="social-link" aria-label="Twitter"
+                            title="Twitter" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/twitter.avif" alt="Twitter" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCgW7jR8McJwjxPh0fDQaXGg/videos" class="social-link"
+                            aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+                            <img src="../assets/img/youtube.avif" alt="YouTube" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <p class="footer-credits">PROJET RÉALISÉ PAR HAMDI RAHMA (TPA1) DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET MATILDA - ALICE BALL</p>
+
+        <div class="footer-credits">
+            PROJET RÉALISÉ PAR HAMDI RAHMA DANS LE CADRE DU BUT MMI - UNIVERSITÉ MARIE ET LOUIS PASTEUR © 2025 - L'EFFET
+            MATILDA
+        </div>
     </footer>
+
+    <script src="../src/js/script.js" defer></script>
 </body>
 </html>
-

@@ -15,6 +15,31 @@
   filter: brightness(0.95);
 }
 
+/* Boutons film et livre */
+.btn-film,
+.btn-livre {
+  display: inline-block;
+  padding: 0.6rem 1.7rem;
+  border-radius: 0;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: var(--color-brown);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-film:hover,
+.btn-livre:hover {
+  background-color: var(--color-beige);
+  border-color: var(--color-beige);
+  color: var(--color-text-dark);
+  filter: brightness(1);
+}
+
 
 
 
