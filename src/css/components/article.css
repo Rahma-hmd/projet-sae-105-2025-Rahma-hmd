@@ -1,4 +1,4 @@
-/* Bloc d’ouverture : image + légende beige */
+/* Hero section avec image principale */
 main>article {
   margin-top: 1.5rem;
 }
@@ -8,6 +8,7 @@ main>article img {
   margin-inline: auto;
 }
 
+/* Légende beige sous l'image hero */
 .carte-legende {
   background-color: var(--color-beige);
   color: var(--color-text-dark);

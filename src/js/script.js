@@ -1,11 +1,13 @@
-// script.js (moved from inline)
-// Handles accordion and carousel (scroll-based) with touch/drag support
+// Script principal du site
+// Gère l'accordéon, le carousel et le menu
 (function () {
     'use strict';
 
+    // Fonction pour l'accordéon "L'effet Matilda : c'est quoi ?"
     function initAccordion() {
         const accordeon = document.querySelector('.accordeon');
-        if (!accordeon) return;
+        if (!accordeon) return; // Si pas d'accordéon sur la page, on sort
+        
         const headerButton = accordeon.querySelector('.accordeon-header');
         if (headerButton) {
             headerButton.addEventListener('click', function () {
@@ -14,6 +16,7 @@
         }
     }
 
+    // Gestion du carousel d'articles
     function initCarousel() {
         const carousel = document.querySelector('.carousel-articles');
         if (!carousel) return;
@@ -23,7 +26,7 @@
         const prevBtn = carousel.querySelector('.carousel-arrow--prev');
         const nextBtn = carousel.querySelector('.carousel-arrow--next');
         let current = 0;
-        let autoTimer = null;
+        let autoTimer = null; // Timer pour le défilement automatique
 
         function scrollToIndex(index) {
             if (!slides.length) return;
@@ -64,23 +67,26 @@
             });
         }
 
-        // Update current index based on closest slide when scrolling
+        // Mise à jour de l'index quand on scroll manuellement
         let scrollTimeout = null;
         track.addEventListener('scroll', function () {
             if (scrollTimeout) clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(function () {
-                // find nearest slide by offsetLeft
+                // Trouve la slide la plus proche
                 let closest = 0;
                 let minDiff = Infinity;
                 for (let i = 0; i < slides.length; i++) {
                     const diff = Math.abs(slides[i].offsetLeft - track.scrollLeft);
-                    if (diff < minDiff) { minDiff = diff; closest = i; }
+                    if (diff < minDiff) { 
+                        minDiff = diff; 
+                        closest = i; 
+                    }
                 }
                 current = closest;
             }, 100);
         }, { passive: true });
 
-        // Touch / pointer drag support for desktop and mobile
+        // Support du drag/touch pour mobile et desktop
         let isPointerDown = false;
         let startX = 0;
         let startScroll = 0;
@@ -102,8 +108,12 @@
         function endPointer(e) {
             if (!isPointerDown) return;
             isPointerDown = false;
-            try { track.releasePointerCapture(e.pointerId); } catch (err) { }
-            // snap to nearest slide
+            try { 
+                track.releasePointerCapture(e.pointerId); 
+            } catch (err) { 
+                // Erreur ignorée si le navigateur ne supporte pas
+            }
+            // Aligne sur la slide la plus proche
             let closest = 0;
             let minDiff = Infinity;
             for (let i = 0; i < slides.length; i++) {
@@ -118,12 +128,11 @@
         track.addEventListener('pointercancel', endPointer);
         track.addEventListener('pointerleave', endPointer);
 
-        // Start auto
+        // Démarre le défilement automatique
         startAuto();
-
-        // If user touches with finger, stop auto until release (handled by pointer events above)
     }
 
+    // Gestion du menu off-canvas
     function initSiteMenu() {
         const menu = document.getElementById('siteMenu');
         const overlay = document.getElementById('menuOverlay');
@@ -131,8 +140,7 @@
         if (!menu || !overlay || !toggles.length) return;
 
         const closeBtn = menu.querySelector('.menu-close');
-
-        let lastFocused = null;
+        let lastFocused = null; // Pour remettre le focus après fermeture
 
         function updateFocusable() {
             return Array.from(menu.querySelectorAll('a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])')).filter(el => !el.hasAttribute('disabled'));
@@ -187,70 +195,30 @@
             if (e.key === 'Escape') closeMenu();
         });
 
-        // Accordion inside menu
+        // Accordéon dans le menu (sous-menu Articles)
         const accBtns = menu.querySelectorAll('.menu-accordion');
         accBtns.forEach(btn => {
             btn.addEventListener('click', function () {
                 const expanded = btn.getAttribute('aria-expanded') === 'true';
                 btn.setAttribute('aria-expanded', String(!expanded));
                 const submenu = btn.nextElementSibling;
-                if (submenu) submenu.hidden = expanded;
-
-                // If this accordion has a carousel, initialize or toggle it
-                const carousel = btn.parentElement.querySelector('.menu-articles');
-                if (carousel) {
-                    carousel.hidden = expanded;
-                    if (!carousel._menuCarouselInit && !expanded) {
-                        initMenuArticlesCarousel(carousel);
-                        carousel._menuCarouselInit = true;
-                    }
+                if (submenu) {
+                    submenu.hidden = expanded;
                 }
             });
         });
 
-        function initMenuArticlesCarousel(carouselEl) {
-            const track = carouselEl.querySelector('.menu-articles-track');
-            const prev = carouselEl.querySelector('.menu-article-prev');
-            const next = carouselEl.querySelector('.menu-article-next');
-            if (!track) return;
-
-            function scrollBySlide(direction) {
-                const slide = track.querySelector('.menu-article');
-                if (!slide) return;
-                const step = slide.offsetWidth + parseFloat(getComputedStyle(track).gap || 0);
-                track.scrollBy({ left: direction * step, behavior: 'smooth' });
-            }
-
-            prev?.addEventListener('click', function () { scrollBySlide(-1); });
-            next?.addEventListener('click', function () { scrollBySlide(1); });
-
-            // pointer drag
-            let isDown = false, startX = 0, startScroll = 0;
-            track.addEventListener('pointerdown', function (e) {
-                isDown = true; track.setPointerCapture(e.pointerId);
-                startX = e.clientX; startScroll = track.scrollLeft;
-            });
-            track.addEventListener('pointermove', function (e) {
-                if (!isDown) return; const dx = startX - e.clientX; track.scrollLeft = startScroll + dx;
-            });
-            function endDrag(e) { if (!isDown) return; isDown = false; try { track.releasePointerCapture(e.pointerId); } catch (err) { } }
-            track.addEventListener('pointerup', endDrag); track.addEventListener('pointercancel', endDrag); track.addEventListener('pointerleave', endDrag);
-        }
     }
 
+    // Page 404 : compte à rebours et redirection
     function initPage404() {
-        // Compte à rebours et redirection automatique pour la page 404
         const countdownElement = document.getElementById('countdown');
-        if (!countdownElement) return; // Si on n'est pas sur la page 404, on sort
+        if (!countdownElement) return; // Pas sur la page 404
 
         let countdown = 5;
-        const redirectMessage = document.querySelector('.redirect-message');
-
         const timer = setInterval(function () {
             countdown--;
-            if (countdownElement) {
-                countdownElement.textContent = countdown;
-            }
+            countdownElement.textContent = countdown;
 
             if (countdown <= 0) {
                 clearInterval(timer);
@@ -258,7 +226,7 @@
             }
         }, 1000);
 
-        // Redirection immédiate si l'utilisateur clique sur le bouton
+        // Bouton pour rediriger immédiatement
         const btn404 = document.querySelector('.btn-404');
         if (btn404) {
             btn404.addEventListener('click', function (e) {
@@ -269,11 +237,45 @@
         }
     }
 
-    // Init on DOM ready
+    // Validation du formulaire de contact
+    function initContactForm() {
+        const form = document.querySelector('.contact-form');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const name = form.querySelector('#name').value.trim();
+            const email = form.querySelector('#email').value.trim();
+            const subject = form.querySelector('#subject').value.trim();
+            const message = form.querySelector('#message').value.trim();
+
+            // Validation basique
+            if (!name || !email || !subject || !message) {
+                alert('Veuillez remplir tous les champs.');
+                return;
+            }
+
+            // Validation email simple
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Veuillez entrer une adresse email valide.');
+                return;
+            }
+
+            // Si tout est OK, on pourrait envoyer les données
+            // Pour l'instant, on affiche juste un message
+            alert('Message envoyé ! (Fonctionnalité à implémenter côté serveur)');
+            form.reset();
+        });
+    }
+
+    // Initialisation quand le DOM est prêt
     document.addEventListener('DOMContentLoaded', function () {
         initAccordion();
         initCarousel();
         initSiteMenu();
         initPage404();
+        initContactForm();
     });
 })();
