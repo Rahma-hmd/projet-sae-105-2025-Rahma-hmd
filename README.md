@@ -6,5 +6,5 @@
 - NOM :Hamdi
 - PRÉNOM :Rahma
 - GROUPE :A1
-- URL du site :
-- URL FIGMA :
+- URL du site : https://aliceball.rahmaproject.fr 
+- URL FIGMA :https://www.figma.com/design/wLiFU95wUqiAyKCgqLuejU/Maquettes-projet-individuel-%E2%80%94-Rahma-HAMDI?node-id=3701-113&t=NEUxHDPF78NSw89a-1 
